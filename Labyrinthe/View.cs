@@ -2,7 +2,20 @@
 {
     internal class View
     {
-        
+        public void AfficherLabyrinthe(Labyrinthe labyrinthe)
+        {
+            for (int y = 0; y < 20; y++)
+            {
+                for (int x = 0; x < 20; x++)
+                {
+                    if (labyrinthe.PosX == x && labyrinthe.PosY == y)
+                        Console.Write('P');
+                    else
+                        Console.Write(labyrinthe.Map[x,y]);
+                }
+                Console.WriteLine();
+            }
+        }
         public void AfficherEntete()
         {
             Console.Clear();
