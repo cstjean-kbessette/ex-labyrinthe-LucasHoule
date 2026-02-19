@@ -25,32 +25,32 @@
             { '█','█','█','█',' ','█','█','█',' ','█','█','█','█','█',' ','█','█','█',' ','█' },
             { '█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█' }
         };
-        public int PosX = 1;
         public int PosY = 1;
+        public int PosX = 1;
 
         public void MoveLeft()
         {
-            if (Map[PosY, PosX - 1] != '█')
-                PosX--;
+            if (Map[PosX, PosY - 1] != '█')
+                PosY--;
         }
         public void MoveRight()
         {
-            if (Map[PosY, PosX + 1] != '█')
-                PosX++;
+            if (Map[PosX, PosY + 1] != '█')
+                PosY++;
         }
         public void MoveUp()
         {
-            if (Map[PosY - 1, PosX] != '█')
-                PosY--;
+            if (Map[PosX - 1, PosY] != '█')
+                PosX--;
         }
         public void MoveDown()
         {
-            if (Map[PosY + 1, PosX] != '█')
-                PosY++;
+            if (Map[PosX + 1, PosY] != '█')
+                PosX++;
         }
         public bool IsExit()
         {
-            if (Map[PosY, PosX] == 'E')
+            if (Map[PosX, PosY] == 'E')
                 return true;
             else
                 return false;
