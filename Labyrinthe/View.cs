@@ -4,14 +4,14 @@
     {
         public void AfficherLabyrinthe(Labyrinthe labyrinthe)
         {
-            for (int x = 0; x < labyrinthe.Map.GetLength(0); x++)
+            for (int y = 0; y < labyrinthe.Map.GetLength(0); y++)
             {
-                for (int y = 0; y < labyrinthe.Map.GetLength(1); y++)
+                for (int x = 0; x < labyrinthe.Map.GetLength(1); x++)
                 {
-                    if (labyrinthe.PosY == y && labyrinthe.PosX == x)
+                    if (labyrinthe.PosX == x && labyrinthe.PosY == y)
                         Console.Write('P');
                     else
-                        Console.Write(labyrinthe.Map[x,y]);
+                        Console.Write(labyrinthe.Map[y,x]);
                 }
                 Console.WriteLine();
             }
