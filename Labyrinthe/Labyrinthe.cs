@@ -28,29 +28,29 @@
         public int PosX = 1;
         public int PosY = 1;
 
-        public void MoveUp()
-        {
-            if (Map[PosX, PosY - 1] != '█')
-                PosY--;
-        }
-        public void MoveDown()
-        {
-            if (Map[PosX, PosY + 1] != '█')
-                PosY++;
-        }
         public void MoveLeft()
         {
-            if (Map[PosX - 1, PosY] != '█')
+            if (Map[PosY, PosX - 1] != '█')
                 PosX--;
         }
         public void MoveRight()
         {
-            if (Map[PosX + 1, PosY] != '█')
+            if (Map[PosY, PosX + 1] != '█')
                 PosX++;
+        }
+        public void MoveUp()
+        {
+            if (Map[PosY - 1, PosX] != '█')
+                PosY--;
+        }
+        public void MoveDown()
+        {
+            if (Map[PosY + 1, PosX] != '█')
+                PosY++;
         }
         public bool IsExit()
         {
-            if (Map[PosX, PosY] == 'E')
+            if (Map[PosY, PosX] == 'E')
                 return true;
             else
                 return false;
