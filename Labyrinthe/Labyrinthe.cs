@@ -30,22 +30,22 @@
 
         public void MoveUp()
         {
-            if (Map[PosX, PosY - 1] == ' ' || Map[PosX, PosY - 1] == 'E')
+            if (Map[PosX, PosY - 1] != '█')
                 PosY--;
         }
         public void MoveDown()
         {
-            if (Map[PosX, PosY + 1] == ' ' || Map[PosX, PosY + 1] == 'E')
+            if (Map[PosX, PosY + 1] != '█')
                 PosY++;
         }
         public void MoveLeft()
         {
-            if (Map[PosX - 1, PosY] == ' ' || Map[PosX - 1, PosY] == 'E')
+            if (Map[PosX - 1, PosY] != '█')
                 PosX--;
         }
         public void MoveRight()
         {
-            if (Map[PosX + 1, PosY] == ' ' || Map[PosX + 1, PosY] == 'E')
+            if (Map[PosX + 1, PosY] != '█')
                 PosX++;
         }
         public bool IsExit()
